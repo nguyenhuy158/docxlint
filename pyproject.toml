@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docx-jinja2-validator"
+version = "0.1.0"
+description = "Validate Jinja2 template syntax inside .docx files (docxtpl compatible)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = []  # stdlib only — no extra deps needed
+
+keywords = ["docx", "jinja2", "docxtpl", "template", "validation", "word"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Office Suites",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Text Processing :: Markup :: XML",
+]
+
+[[project.authors]]
+name = "Huy"
+email = "dichvu@techcoop.vn"
+
+[project.urls]
+Homepage = "https://github.com/techcoop-vn/docx-jinja2-validator"
+Issues   = "https://github.com/techcoop-vn/docx-jinja2-validator/issues"
+
+[project.scripts]
+docxlint = "docx_jinja2_validator.validator:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
