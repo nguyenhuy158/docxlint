@@ -5,29 +5,29 @@ Validate [Jinja2](https://jinja.palletsprojects.com/) template syntax inside `.d
 ## Install
 
 ```bash
-pip install docx-jinja2-validator
+pip install docxlint
 ```
 
 ## Usage
 
 ```bash
 # single file
-docx-validate template.docx
+docxlint template.docx
 
 # entire folder
-docx-validate ./templates/
+docxlint ./templates/
 
 # recursive (includes subfolders)
-docx-validate ./templates/ --recursive
+docxlint ./templates/ --recursive
 
 # verbose (show all block tags)
-docx-validate ./templates/ --verbose
+docxlint ./templates/ --verbose
 ```
 
 Or via Python module:
 
 ```bash
-python -m docx_jinja2_validator template.docx
+python -m docxlint template.docx
 ```
 
 ## What it checks
@@ -86,13 +86,13 @@ Result
 Useful for CI/CD pipelines:
 
 ```bash
-docx-validate ./templates/ && echo "Templates OK" || echo "Fix templates!"
+docxlint ./templates/ && echo "Templates OK" || echo "Fix templates!"
 ```
 
 ## Use as a library
 
 ```python
-from docx_jinja2_validator import validate_one
+from docxlint import validate_one
 from pathlib import Path
 
 result = validate_one(Path("template.docx"), verbose=False)

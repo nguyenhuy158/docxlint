@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "docx-jinja2-validator"
+name = "docxlint"
 version = "0.1.0"
 description = "Validate Jinja2 template syntax inside .docx files (docxtpl compatible)"
 readme = "README.md"
@@ -36,7 +36,7 @@ Homepage = "https://github.com/techcoop-vn/docx-jinja2-validator"
 Issues   = "https://github.com/techcoop-vn/docx-jinja2-validator/issues"
 
 [project.scripts]
-docxlint = "docx_jinja2_validator.validator:main"
+docxlint = "docxlint.validator:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

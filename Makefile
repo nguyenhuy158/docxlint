@@ -1,7 +1,7 @@
 .PHONY: help install dev test build publish publish-test clean
 
 PYTHON  := python
-PACKAGE := docx_jinja2_validator
+PACKAGE := docxlint
 
 help:
 	@echo "Usage: make <target>"
